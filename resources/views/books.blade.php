@@ -1,5 +1,8 @@
 <x-layout>
   <h1>本一覧</h1>
+  @foreach ($books as $book)
+    {{ $book->title }}
+  @endforeach
   <p>
     <a href="{{ url('/') }}">メニューへ戻る</a>
   </p>
