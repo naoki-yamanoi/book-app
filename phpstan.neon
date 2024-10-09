@@ -1,6 +1,13 @@
+includes:
+    - ./vendor/nunomaduro/larastan/extension.neon
 parameters:
-    level: 5
     paths:
         - app
-includes:
-    - vendor/nunomaduro/larastan/extension.neon
+        - bootstrap
+        - config
+        - database
+        - resources/views
+        - routes
+    excludePaths:
+        - ./routes/console.php
+    level: 2
